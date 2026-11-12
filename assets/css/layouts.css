@@ -66,6 +66,12 @@
   display: flex;
   flex-direction: column;
 }
+@media (max-width: 768px) {
+  .detail-viewport {
+    padding: var(--space-28) var(--space-20);
+    min-height: auto;
+  }
+}
 
 /* -------------------------------------------------------------
    2. BENTO GRID ARCHETYPE (companies.html)
@@ -98,6 +104,18 @@
   border-radius: var(--radius-card);
   padding: var(--space-40);
   display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+@media (max-width: 640px) {
+  .bento-card {
+    padding: var(--space-24) var(--space-20);
+  }
+}
   flex-direction: column;
   position: relative;
   overflow: hidden;
@@ -146,12 +164,19 @@
 /* -------------------------------------------------------------
    4. DATA TABLE & COMPARISON SPREAD (investments.html)
    ------------------------------------------------------------- */
+.table-responsive-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: var(--space-48);
+  border-radius: var(--radius-card);
+  border: 1px solid var(--color-border);
+}
 .layout-comparison-matrix {
   width: 100%;
+  min-width: 680px;
   border-collapse: separate;
   border-spacing: 0;
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-card);
   overflow: hidden;
   background: var(--color-base-card);
 }
@@ -160,6 +185,7 @@
   padding: var(--space-20) var(--space-24);
   border-bottom: 1px solid var(--color-border-subtle);
   text-align: left;
+  vertical-align: top;
 }
 .layout-comparison-matrix th {
   background: var(--color-surface);
@@ -226,6 +252,18 @@
 @media (max-width: 900px) {
   .layout-split-screen {
     grid-template-columns: 1fr;
+    gap: var(--space-32);
+    min-height: auto;
+  }
+  .split-left-panel,
+  .split-right-form {
+    padding: var(--space-32) var(--space-24);
+  }
+}
+@media (max-width: 480px) {
+  .split-left-panel,
+  .split-right-form {
+    padding: var(--space-24) var(--space-16);
   }
 }
 .split-left-panel {

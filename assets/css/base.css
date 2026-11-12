@@ -14,6 +14,9 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -25,6 +28,8 @@ body {
   overflow-x: hidden;
   position: relative;
   min-height: 100vh;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Accessibility: WCAG AA Focus Ring */
@@ -70,6 +75,20 @@ body {
   padding-right: var(--gutter);
 }
 
+/* Fluid responsive grid helper utility */
+.grid-2col-responsive {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-32);
+}
+
+@media (max-width: 768px) {
+  .grid-2col-responsive {
+    grid-template-columns: 1fr;
+    gap: var(--space-20);
+  }
+}
+
 /* Typography Defaults */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
@@ -110,6 +129,21 @@ section {
   padding-top: var(--section-padding-y);
   padding-bottom: var(--section-padding-y);
   position: relative;
+}
+
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 76px;
+  }
+  .section-hero-pad {
+    padding-top: 100px !important;
+    padding-bottom: 56px !important;
+    min-height: auto !important;
+  }
+  .page-main-pad {
+    padding-top: 96px !important;
+    padding-bottom: 64px !important;
+  }
 }
 
 .section-base {

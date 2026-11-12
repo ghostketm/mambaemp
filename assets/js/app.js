@@ -1,22 +1,89 @@
 // Global App Layer: Motion, Scroll Observer & Navigation Drawer
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Mobile Menu Toggle
+  // 1. Unified Mobile Menu Drawer & Toggle System
   const toggle = document.querySelector('.mobile-toggle');
   const drawer = document.querySelector('.mobile-drawer');
 
+  // Backdrop creation if drawer exists and backdrop doesn't
+  let backdrop = document.querySelector('.mobile-drawer-backdrop');
+  if (drawer && !backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.className = 'mobile-drawer-backdrop';
+    document.body.appendChild(backdrop);
+  }
+
+  function closeMenu() {
+    if (drawer) drawer.classList.remove('open');
+    if (toggle) {
+      toggle.classList.remove('active');
+      toggle.setAttribute('aria-expanded', 'false');
+    }
+    if (backdrop) backdrop.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function openMenu() {
+    if (drawer) drawer.classList.add('open');
+    if (toggle) {
+      toggle.classList.add('active');
+      toggle.setAttribute('aria-expanded', 'true');
+    }
+    if (backdrop) backdrop.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
   if (toggle && drawer) {
-    toggle.addEventListener('click', () => {
-      const isOpen = drawer.classList.toggle('open');
-      toggle.classList.toggle('active', isOpen);
-      toggle.setAttribute('aria-expanded', String(isOpen));
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+    toggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const isOpen = drawer.classList.contains('open');
+      if (isOpen) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
     });
 
+    // Close when clicking any nav link inside drawer
     drawer.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
-        drawer.classList.remove('open');
-        toggle.classList.remove('active');
-        toggle.setAttribute('aria-expanded', 'false');
+        closeMenu();
+      });
+    });
+
+    // Close on backdrop tap
+    if (backdrop) {
+      backdrop.addEventListener('click', closeMenu);
+    }
+
+    // Close on explicit close button if present
+    const closeBtn = drawer.querySelector('.mobile-drawer-close');
+    if (closeBtn) {
+      closeBtn.addEventListener('click', closeMenu);
+    }
+
+    // Close on Escape key press
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && drawer.classList.contains('open')) {
+        closeMenu();
+      }
+    });
+  }
+
+  // Also support legacy pages using .burger-btn and .mobile-menu if present
+  const legacyBurger = document.querySelector('.burger-btn');
+  const legacyMenu = document.querySelector('.mobile-menu');
+  if (legacyBurger && legacyMenu) {
+    legacyBurger.addEventListener('click', () => {
+      const isOpen = legacyMenu.classList.toggle('open');
+      legacyBurger.classList.toggle('active', isOpen);
+      legacyBurger.setAttribute('aria-expanded', String(isOpen));
+      document.body.style.overflow = isOpen ? 'hidden' : '';
+    });
+    legacyMenu.querySelectorAll('a').forEach(l => {
+      l.addEventListener('click', () => {
+        legacyMenu.classList.remove('open');
+        legacyBurger.classList.remove('active');
+        legacyBurger.setAttribute('aria-expanded', 'false');
         document.body.style.overflow = '';
       });
     });
