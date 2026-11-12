@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Headquarters | Split-Screen Command Hub</title>
+  <meta name="description" content="Split-Screen Layout and Segmented Hub for Mamba Empire: Investor Relations, Partnerships, Media, and General Dispatches.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://mambaempire.com/contact">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a href="index.html" class="site-brand">
+        <img src="assets/icons/mamba-empire.svg" alt="Mamba Empire Logo" class="site-brand-logo">
+        <span class="site-brand-text">MAMBA EMPIRE</span>
+      </a>
+      <nav class="site-nav">
+        <a href="empire.html" class="nav-link">The Empire</a>
+        <a href="companies.html" class="nav-link">Companies</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="investments.html" class="nav-link">Investments</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="btn btn-primary">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" style="padding-top: 130px; padding-bottom: 96px;">
+    <div class="container">
+      
+      <!-- Split-Screen Command Hub Layout Engine -->
+      <div class="layout-split-screen">
+        
+        <!-- Left Command Panel -->
+        <div class="split-left-panel">
+          <div>
+            <span class="eyebrow" style="color: var(--color-accent);">Direct Routing Desk</span>
+            <h1 style="font-size: 2.6rem; margin-bottom: var(--space-20);">Connect With Mamba Empire</h1>
+            <p style="font-size: 1.05rem; line-height: 1.6; color: var(--color-text-secondary); margin-bottom: var(--space-32);">
+              All communications are routed directly to authorized corporate desks across Nairobi, Kenya. Select your institutional department to initiate transmission.
+            </p>
+
+            <div style="display: flex; flex-direction: column; gap: var(--space-20);">
+              <div>
+                <strong style="color: var(--color-text-primary); font-size: 0.95rem; display: block; margin-bottom: 4px;">Registered Domicile:</strong>
+                <span style="font-size: 0.88rem; color: var(--color-text-secondary);">Mamba Empire Ltd, Nairobi, Kenya</span>
+              </div>
+              <div>
+                <strong style="color: var(--color-text-primary); font-size: 0.95rem; display: block; margin-bottom: 4px;">Official Domain:</strong>
+                <span style="font-size: 0.88rem; color: var(--color-accent); font-weight: 600;">mambaempire.com</span>
+              </div>
+              <div>
+                <strong style="color: var(--color-text-primary); font-size: 0.95rem; display: block; margin-bottom: 4px;">Direct Headquarter Inbox:</strong>
+                <span style="font-size: 0.88rem; color: var(--color-text-secondary);">headquarters@mambaempire.com</span>
+              </div>
+            </div>
+          </div>
+
+          <div style="border-top: 1px solid var(--color-border); padding-top: var(--space-24); margin-top: var(--space-32);">
+            <span style="font-size: 0.78rem; text-transform: uppercase; color: var(--color-text-dim); letter-spacing: 0.08em; display: block; margin-bottom: 6px;">Encrypted Privacy:</span>
+            <p style="font-size: 0.82rem; color: var(--color-text-secondary);">
+              Transmissions are protected pursuant to the Kenya Data Protection Act, 2019 (ODPC).
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Command Form Viewport -->
+        <div class="split-right-form">
+          <!-- Department Selector Tabs -->
+          <div style="display: flex; gap: var(--space-8); flex-wrap: wrap; margin-bottom: var(--space-32);" role="tablist">
+            <button role="tab" aria-selected="true" aria-controls="panel-partnerships" class="btn btn-secondary active">Business Partnerships</button>
+            <button role="tab" aria-selected="false" aria-controls="panel-investors" class="btn btn-secondary">Investor Relations</button>
+            <button role="tab" aria-selected="false" aria-controls="panel-media" class="btn btn-secondary">Media & Press</button>
+            <button role="tab" aria-selected="false" aria-controls="panel-general" class="btn btn-secondary">General Inquiries</button>
+          </div>
+
+          <!-- Tab Panel 1: Partnerships -->
+          <div role="tabpanel" id="panel-partnerships">
+            <h2 style="font-size: 1.8rem; margin-bottom: var(--space-8);">Commercial & Trade Partnerships</h2>
+            <p style="font-size: 0.92rem; color: var(--color-text-secondary); margin-bottom: var(--space-24);">
+              Engage with KOSA for agricultural off-take, ZenIT for hardware/AI systems, or IKR for commercial land and micro-grids.
+            </p>
+
+            <form data-validate="true" data-to="partners@mambaempire.com">
+              <div class="honeypot"><input type="text" name="bot_check" tabindex="-1" autocomplete="off"></div>
+
+              <div class="form-grid form-grid-2" style="margin-bottom: var(--space-16);">
+                <div class="form-group">
+                  <label class="form-label">Full Name *</label>
+                  <input type="text" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Corporate Email *</label>
+                  <input type="email" name="email" class="form-input" required>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: var(--space-16);">
+                <label class="form-label">Bastion of Interest</label>
+                <select name="subject" class="form-select">
+                  <option value="KOSA (Crops, Livestock & Food Exports)">KOSA (Crops, Livestock & Food Exports)</option>
+                  <option value="ZenIT (Hardware Devices, AI & Software)">ZenIT (Hardware Devices, AI & Software)</option>
+                  <option value="BanditSec (Security Integrity & Provenance)">BanditSec (Security Integrity & Provenance)</option>
+                  <option value="IKR (Plantations, Real Estate & Micro-Grids)">IKR (Plantations, Real Estate & Micro-Grids)</option>
+                  <option value="Portfolio & Research Institutes">Portfolio & Research Institutes</option>
+                </select>
+              </div>
+
+              <div class="form-group" style="margin-bottom: var(--space-24);">
+                <label class="form-label">Scope of Engagement *</label>
+                <textarea name="message" rows="5" class="form-textarea" placeholder="Detail your commercial requirements..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Transmit Partnership Inquiry</button>
+              <div class="form-status" style="margin-top: var(--space-16); font-size: 0.85rem; color: var(--color-accent); text-align: center;"></div>
+            </form>
+          </div>
+
+          <!-- Tab Panel 2: Investors -->
+          <div role="tabpanel" id="panel-investors" hidden>
+            <h2 style="font-size: 1.8rem; margin-bottom: var(--space-8);">Institutional Investor Relations</h2>
+            <p style="font-size: 0.92rem; color: var(--color-text-secondary); margin-bottom: var(--space-24);">
+              Request audited schedules, regulatory filings, or confidential investment memoranda under NDA.
+            </p>
+
+            <form data-validate="true" data-to="investors@mambaempire.com">
+              <div class="honeypot"><input type="text" name="bot_check" tabindex="-1" autocomplete="off"></div>
+
+              <div class="form-grid form-grid-2" style="margin-bottom: var(--space-16);">
+                <div class="form-group">
+                  <label class="form-label">Full Name *</label>
+                  <input type="text" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Institutional Email *</label>
+                  <input type="email" name="email" class="form-input" required>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: var(--space-16);">
+                <label class="form-label">Institution / Entity Name</label>
+                <input type="text" name="subject" class="form-input" placeholder="e.g. Sovereign Fund, Family Office, Institution" required>
+              </div>
+
+              <div class="form-group" style="margin-bottom: var(--space-24);">
+                <label class="form-label">Specific Documentation Required *</label>
+                <textarea name="message" rows="5" class="form-textarea" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Transmit Investor Inquiry</button>
+              <div class="form-status" style="margin-top: var(--space-16); font-size: 0.85rem; color: var(--color-accent); text-align: center;"></div>
+            </form>
+          </div>
+
+          <!-- Tab Panel 3: Media -->
+          <div role="tabpanel" id="panel-media" hidden>
+            <h2 style="font-size: 1.8rem; margin-bottom: var(--space-8);">Media & Press Desk</h2>
+            <p style="font-size: 0.92rem; color: var(--color-text-secondary); margin-bottom: var(--space-24);">
+              Official executive statements, interview requests, and corporate media kits.
+            </p>
+
+            <form data-validate="true" data-to="press@mambaempire.com">
+              <div class="honeypot"><input type="text" name="bot_check" tabindex="-1" autocomplete="off"></div>
+
+              <div class="form-grid form-grid-2" style="margin-bottom: var(--space-16);">
+                <div class="form-group">
+                  <label class="form-label">Journalist / Correspondent Name *</label>
+                  <input type="text" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Media Outlet Email *</label>
+                  <input type="email" name="email" class="form-input" required>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: var(--space-16);">
+                <label class="form-label">Publication / Network</label>
+                <input type="text" name="subject" class="form-input" required>
+              </div>
+
+              <div class="form-group" style="margin-bottom: var(--space-24);">
+                <label class="form-label">Editorial Scope & Deadline *</label>
+                <textarea name="message" rows="5" class="form-textarea" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Submit Press Inquiry</button>
+              <div class="form-status" style="margin-top: var(--space-16); font-size: 0.85rem; color: var(--color-accent); text-align: center;"></div>
+            </form>
+          </div>
+
+          <!-- Tab Panel 4: General -->
+          <div role="tabpanel" id="panel-general" hidden>
+            <h2 style="font-size: 1.8rem; margin-bottom: var(--space-8);">General Headquarters Inquiry</h2>
+            <p style="font-size: 0.92rem; color: var(--color-text-secondary); margin-bottom: var(--space-24);">
+              Direct general communication to Mamba Empire Core administrative desk.
+            </p>
+
+            <form data-validate="true" data-to="headquarters@mambaempire.com">
+              <div class="honeypot"><input type="text" name="bot_check" tabindex="-1" autocomplete="off"></div>
+
+              <div class="form-grid form-grid-2" style="margin-bottom: var(--space-16);">
+                <div class="form-group">
+                  <label class="form-label">Name *</label>
+                  <input type="text" name="name" class="form-input" required>
+                </div>
+                <div class="form-group">
+                  <label class="form-label">Email Address *</label>
+                  <input type="email" name="email" class="form-input" required>
+                </div>
+              </div>
+
+              <div class="form-group" style="margin-bottom: var(--space-16);">
+                <label class="form-label">Subject</label>
+                <input type="text" name="subject" class="form-input" required>
+              </div>
+
+              <div class="form-group" style="margin-bottom: var(--space-24);">
+                <label class="form-label">Message *</label>
+                <textarea name="message" rows="5" class="form-textarea" required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">Transmit Message</button>
+              <div class="form-status" style="margin-top: var(--space-16); font-size: 0.85rem; color: var(--color-accent); text-align: center;"></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="site-brand">
+            <img src="assets/icons/mamba-empire.svg" alt="Mamba Empire Logo" style="width: 32px; height: 32px;">
+            <span class="site-brand-text" style="font-size: 1.15rem;">MAMBA EMPIRE</span>
+          </a>
+          <p>Official corporate headquarters of Mamba Empire Ltd.</p>
+        </div>
+        <div class="footer-col">
+          <h5>Architecture</h5>
+          <ul>
+            <li><a href="empire.html">Structure Map</a></li>
+            <li><a href="companies.html">Portfolio</a></li>
+            <li><a href="industries.html">Industries</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Corporate</h5>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="leadership.html">Leadership</a></li>
+            <li><a href="investments.html">Investments</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Governance</h5>
+          <ul>
+            <li><a href="governance.html">Framework</a></li>
+            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Mamba Empire Ltd. Registered in Kenya.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/site.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

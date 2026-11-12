@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Financial Plan & Modeling | Mamba Empire</title>
+  <meta name="description" content="Financial framework, Year-1 base case ($349K revenue), 3-year outlook ($1.48M target), launch funding requirement, and indicative valuation multiples.">
+  <meta name="theme-color" content="#07120e">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;1,9..144,300;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <a class="skip" href="#main-content">Skip to main content</a>
+
+  <!-- Top Navigation -->
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand" aria-label="Mamba Empire Home">
+        <svg class="brand-emblem" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+          <path d="M32 3 42 19 46 22 41 60 32 51 23 60 18 22 22 19Z"/>
+          <circle cx="23" cy="17" r="2.2" fill="currentColor" stroke="none"/>
+          <circle cx="41" cy="17" r="2.2" fill="currentColor" stroke="none"/>
+          <path d="M32 51V28M32 40 40 32M32 40 24 32M32 33 37 27M32 33 27 27"/>
+        </svg>
+        <div class="brand-text">
+          <span class="brand-name">MAMBA EMPIRE</span>
+          <span class="brand-sub">Refined Master Plan · 2026</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary Navigation">
+        <a href="index.html" class="nav-link">Ecosystem</a>
+        <a href="divisions.html" class="nav-link">Divisions</a>
+        <a href="financials.html" class="nav-link active">Financial Plan</a>
+        <a href="roadmap.html" class="nav-link">Roadmap</a>
+        <a href="compliance.html" class="nav-link">Governance & Risk</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="index.html#contact" class="btn-nav">Partner With Us</a>
+      </div>
+
+      <button class="burger-btn" id="burgerBtn" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="index.html">Overview</a>
+    <a href="divisions.html">Six Disciplined Divisions</a>
+    <a href="financials.html">Financial Model & Projections</a>
+    <a href="roadmap.html">Stage-Gated Roadmap</a>
+    <a href="compliance.html">Compliance, Risk & Governance</a>
+    <a href="index.html#contact" style="color: var(--gold);">Get In Touch</a>
+  </div>
+
+  <main id="main-content" style="padding-top: 100px;">
+    <!-- Header banner -->
+    <section style="padding: 60px 0 30px;">
+      <div class="container">
+        <span class="section-pre">Section 06 · Financial Framework</span>
+        <h1 class="hero-title" style="font-size: clamp(2.4rem, 5vw, 4rem); margin-bottom: 20px;">
+          Grounded Numbers & <br><span class="accent">Financial Discipline</span>
+        </h1>
+        <p class="section-desc" style="max-width: 820px;">
+          All financial figures in US Dollars (USD), converted at ~KSh 129.7 per USD. Built on disciplined margins, zero unhedged capex, and shared corporate overhead. Projections are realistic planning estimates benchmarked to East African market realities.
+        </p>
+      </div>
+    </section>
+
+    <!-- Key Financial KPI Highlights -->
+    <section style="padding-top: 0; padding-bottom: 40px;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+          <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+            <span class="metric-label">Year-1 Base Revenue</span>
+            <div class="stat-number" style="font-size: 2.4rem; margin: 6px 0;">$349,000</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">Across 5 active revenue divisions</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+            <span class="metric-label">Year-1 Gross Profit</span>
+            <div class="stat-number" style="font-size: 2.4rem; margin: 6px 0;">$125,595</div>
+            <p style="font-size: 0.85rem; color: var(--jade);">36.0% blended gross margin</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+            <span class="metric-label">Group Net Profit</span>
+            <div class="stat-number" style="font-size: 2.4rem; margin: 6px 0;">$21,045</div>
+            <p style="font-size: 0.85rem; color: var(--text-muted);">6.0% net margin after $14K shared costs</p>
+          </div>
+          <div style="background: var(--bg-card); border: 1px solid var(--border); padding: 24px; border-radius: 10px;">
+            <span class="metric-label">Launch Capital</span>
+            <div class="stat-number" style="font-size: 2.4rem; margin: 6px 0;">$74,800</div>
+            <p style="font-size: 0.85rem; color: var(--gold);">$40,000 trade revolving capital</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table 6.1: Year-1 Base Case -->
+    <section id="year1" style="background: rgba(13, 30, 24, 0.4);">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-pre">Framework 6.1</span>
+          <h2 class="section-title">Year-1 Base Case Divisional Breakdown</h2>
+          <p class="section-desc">
+            Division net profit is stated before group shared costs ($14,000), covering accounting, tax, legal, company secretarial, insurance, compliance, banking, and governance.
+          </p>
+        </div>
+
+        <div class="data-table-container" id="tableYear1">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+
+        <div style="margin-top: 24px; background: rgba(7, 18, 14, 0.6); border: 1px solid var(--border); border-radius: 8px; padding: 20px;">
+          <h4 style="color: var(--gold); font-size: 1rem; margin-bottom: 8px;">Key Year-1 Operating Assumptions:</h4>
+          <ul style="color: var(--text-muted); font-size: 0.9rem; padding-left: 20px; display: flex; flex-direction: column; gap: 6px;">
+            <li><strong>Revenue ramp:</strong> ~70% of annual revenue falls in H2 because regulatory approvals, licensing, and trade forward contracts take time to finalize.</li>
+            <li><strong>KOSA terms:</strong> 18% gross margin after freight, packaging, export phytosanitary documentation, and grading. Financed via 30% buyer deposit and balance against bills of lading.</li>
+            <li><strong>ZenIT model:</strong> 60% gross margin delivered by small core leadership plus specialized vetted contractors. Cloud and server costs accounted for.</li>
+            <li><strong>BanditSec model:</strong> 65% gross margin after vulnerability scanning tooling, licensing, and testing specialists.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Table 6.3: 3-Year Outlook -->
+    <section id="three-year">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-pre">Framework 6.3</span>
+          <h2 class="section-title">Three-Year Growth Outlook (Base Case)</h2>
+          <p class="section-desc">
+            Margins expand from 6.0% to 12.0% as recurring software & security retainers compound, KOSA bulk trading lowers unit shipping overhead, and central shared costs scale across higher volume.
+          </p>
+        </div>
+
+        <div class="data-table-container" id="tableThreeYear">
+          <!-- Rendered dynamically by app.js -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Scenarios for Year 1 & Launch Funding -->
+    <section style="background: rgba(13, 30, 24, 0.4);" id="funding">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 48px;">
+          
+          <!-- Scenarios Table -->
+          <div>
+            <div class="section-head" style="margin-bottom: 24px;">
+              <span class="section-pre">Framework 6.4</span>
+              <h2 class="section-title" style="font-size: 1.8rem;">Year-1 Scenarios</h2>
+            </div>
+            
+            <div class="data-table-container">
+              <table class="data-table">
+                <thead>
+                  <tr>
+                    <th>Scenario</th>
+                    <th>Conditions</th>
+                    <th class="numeric">Revenue</th>
+                    <th class="numeric">Net Profit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Conservative</strong></td>
+                    <td style="color: var(--text-muted); font-size: 0.88rem;">Launches slip 1 quarter; fewer export shipments</td>
+                    <td class="numeric">$209,000</td>
+                    <td class="numeric" style="color: #ffb088;">~Break-even</td>
+                  </tr>
+                  <tr class="highlight-row">
+                    <td><strong>Base Case</strong></td>
+                    <td style="color: var(--text-muted); font-size: 0.88rem;">Plan executed as described across all 5 lines</td>
+                    <td class="numeric"><strong>$349,000</strong></td>
+                    <td class="numeric" style="color: var(--jade);"><strong>$21,000</strong></td>
+                  </tr>
+                  <tr>
+                    <td><strong>Optimistic</strong></td>
+                    <td style="color: var(--text-muted); font-size: 0.88rem;">Early export wins + 2 large enterprise software deals</td>
+                    <td class="numeric">$489,000</td>
+                    <td class="numeric" style="color: var(--gold);">~$35,000</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Launch Funding Requirement -->
+          <div>
+            <div class="section-head" style="margin-bottom: 24px;">
+              <span class="section-pre">Framework 6.5</span>
+              <h2 class="section-title" style="font-size: 1.8rem;">Launch Capital: $74,800</h2>
+            </div>
+
+            <div class="data-table-container" id="tableLaunchFunding">
+              <!-- Rendered dynamically by app.js -->
+            </div>
+
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 14px; line-height: 1.5;">
+              <strong>Suggested Capital Sources:</strong> Founders' capital, small grants for agri-tech/digital skills, supplier credit terms, and purchase-order revolving bank facilities. We deliberately avoid early equity dilution until Year-1 milestones are demonstrated.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Indicative Valuation Multiples -->
+    <section>
+      <div class="container">
+        <div class="section-head">
+          <span class="section-pre">Framework 6.6</span>
+          <h2 class="section-title">Indicative Valuation Multiples</h2>
+          <p class="section-desc">
+            Applying 3x to 5x net profit is not meaningful for early-stage operating ventures. Early-stage firms are better benchmarked on revenue multiples. Core is not valued separately to avoid double-counting.
+          </p>
+        </div>
+
+        <div class="data-table-container">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Division</th>
+                <th class="numeric">Year 1 Revenue</th>
+                <th class="numeric">Revenue Multiple</th>
+                <th class="numeric">Indicative Valuation Range</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>KOSA (Trade)</strong></td>
+                <td class="numeric">$194,000</td>
+                <td class="numeric">0.3x to 0.6x</td>
+                <td class="numeric">$58,200 – $116,400</td>
+              </tr>
+              <tr>
+                <td><strong>ZenIT (Software & AI)</strong></td>
+                <td class="numeric">$93,000</td>
+                <td class="numeric">1.0x to 2.0x</td>
+                <td class="numeric">$93,000 – $186,000</td>
+              </tr>
+              <tr>
+                <td><strong>BanditSec (Cybersecurity)</strong></td>
+                <td class="numeric">$31,000</td>
+                <td class="numeric">1.0x to 2.0x</td>
+                <td class="numeric">$31,000 – $62,000</td>
+              </tr>
+              <tr>
+                <td><strong>Portfolio & Education</strong></td>
+                <td class="numeric">$15,500</td>
+                <td class="numeric">0.5x to 1.0x</td>
+                <td class="numeric">$7,750 – $15,500</td>
+              </tr>
+              <tr>
+                <td><strong>IKR (Infrastructure)</strong></td>
+                <td class="numeric">$15,500</td>
+                <td class="numeric">0.3x to 0.5x</td>
+                <td class="numeric">$4,650 – $7,750</td>
+              </tr>
+              <tr class="total-row">
+                <td><strong>Combined Ecosystem</strong></td>
+                <td class="numeric">$349,000</td>
+                <td class="numeric">Blended</td>
+                <td class="numeric" style="color: var(--gold);">$194,600 – $387,650</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="font-size: 0.85rem; color: var(--text-dim); margin-top: 14px;">
+          * Valuation increases substantially once the ecosystem demonstrates audited accounts, multi-year export buyer renewals, and compounding monthly recurring revenue (MRR). Re-benchmark at the conclusion of Year 2.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand">
+            <svg class="brand-emblem" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3">
+              <path d="M32 3 42 19 46 22 41 60 32 51 23 60 18 22 22 19Z"/>
+              <circle cx="23" cy="17" r="2.2" fill="currentColor" stroke="none"/>
+              <circle cx="41" cy="17" r="2.2" fill="currentColor" stroke="none"/>
+              <path d="M32 51V28M32 40 40 32M32 40 24 32M32 33 37 27M32 33 27 27"/>
+            </svg>
+            <div class="brand-text">
+              <span class="brand-name">MAMBA EMPIRE</span>
+              <span class="brand-sub">Refined Master Plan · 2026</span>
+            </div>
+          </div>
+          <p>An interconnected operating ecosystem built on asset-light discipline, rigorous compliance, and transparent East African value creation.</p>
+        </div>
+
+        <div class="footer-col">
+          <h5>Divisions</h5>
+          <ul>
+            <li><a href="divisions.html#kosa">KOSA Agri-Trade</a></li>
+            <li><a href="divisions.html#zenit">ZenIT Tech & AI</a></li>
+            <li><a href="divisions.html#banditsec">BanditSec Cyber</a></li>
+            <li><a href="divisions.html#education">Portfolio & Education</a></li>
+            <li><a href="divisions.html#ikr">IKR Warehousing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Financials</h5>
+          <ul>
+            <li><a href="#year1">Year 1 Base Case</a></li>
+            <li><a href="#three-year">3-Year Trajectory</a></li>
+            <li><a href="#funding">Launch Budget</a></li>
+            <li><a href="mamba.pdf" target="_blank">PDF Master Plan</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h5>Governance</h5>
+          <ul>
+            <li><a href="compliance.html#regulatory">Regulatory Checklist</a></li>
+            <li><a href="compliance.html#risks">Risk Matrix</a></li>
+            <li><a href="roadmap.html">Stage Gates</a></li>
+            <li><a href="index.html#contact">Inquiry</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Mamba Empire Ltd. All rights reserved. Registered under Kenya BRS.</div>
+        <div>Confidential Strategic Operating Framework</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
+

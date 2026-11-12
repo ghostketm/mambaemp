@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcedb4" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#996515" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#00ffaa" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#00aa66" stop-opacity="0" />
+    </linearGradient>
+    <filter id="crocGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Imperial Shield Crest / Hexagon Base -->
+  <polygon points="50,4 88,24 88,72 50,96 12,72 12,24" fill="#040b08" stroke="url(#goldGrad)" stroke-width="2.5" stroke-linejoin="round" />
+  
+  <!-- Inner geometric boundary lines -->
+  <polygon points="50,11 81,28 81,68 50,89 19,68 19,28" fill="#071711" stroke="url(#goldGrad)" stroke-width="1" stroke-opacity="0.4" />
+
+  <!-- Crocodile Crown Crest (Apex Osteoderm Horns) -->
+  <path d="M38,20 L44,27 L50,16 L56,27 L62,20 L58,32 L42,32 Z" fill="url(#goldGrad)" />
+
+  <!-- Crocodile Armored Head Profile & Snout (Geometric / Sovereign predatory silhouette) -->
+  <!-- Upper Snout & Powerful Jaw Contour -->
+  <path d="M50,30 L64,36 L70,44 L66,54 L58,56 L50,62 L42,56 L34,54 L30,44 L36,36 Z" fill="#0d2b20" stroke="url(#goldGrad)" stroke-width="1.8" />
+
+  <!-- Crocodile Snout Ridge & Crest Ridges (Dorsal Scutes) -->
+  <path d="M50,30 L50,62" stroke="url(#goldGrad)" stroke-width="1.5" stroke-linecap="round" />
+  <path d="M42,36 L50,44 L58,36" stroke="url(#goldGrad)" stroke-width="1.2" stroke-linecap="round" />
+  <path d="M38,44 L50,52 L62,44" stroke="url(#goldGrad)" stroke-width="1.2" stroke-linecap="round" />
+
+  <!-- Crocodile Emerald Hyper-Intelligent Eyes -->
+  <polygon points="39,41 45,43 41,46" fill="#00ffaa" filter="url(#crocGlow)" />
+  <polygon points="61,41 55,43 59,46" fill="#00ffaa" filter="url(#crocGlow)" />
+  <circle cx="42" cy="43.5" r="0.8" fill="#ffffff" />
+  <circle cx="58" cy="43.5" r="0.8" fill="#ffffff" />
+
+  <!-- Lower Imperial Teeth / Interlocking Mandible Serrations -->
+  <polygon points="46,62 48,65 50,62 52,65 54,62" fill="url(#goldGrad)" />
+  <polygon points="38,55 40,59 43,55" fill="url(#goldGrad)" />
+  <polygon points="62,55 60,59 57,55" fill="url(#goldGrad)" />
+
+  <!-- Sovereign Imperial Collar / Scepter Ribs -->
+  <path d="M28,60 L50,78 L72,60" stroke="url(#goldGrad)" stroke-width="2" stroke-linecap="round" fill="none" />
+  <path d="M32,68 L50,84 L68,68" stroke="url(#goldGrad)" stroke-width="1.2" stroke-linecap="round" fill="none" />
+  
+  <!-- Apex Diamond / Sol Invictus Pearl -->
+  <polygon points="50,83 54,87 50,91 46,87" fill="url(#goldGrad)" />
+</svg>

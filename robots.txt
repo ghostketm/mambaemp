@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mambaempire.com/sitemap.xml
+

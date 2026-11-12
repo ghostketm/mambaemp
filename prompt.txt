@@ -1,0 +1,242 @@
+# MASTER PROMPT: MAMBA EMPIRE OFFICIAL WEBSITE
+## Full rebuild as the single, permanent, public corporate headquarters
+
+---
+
+## 1. ROLE
+
+Act as a Principal Frontend Architect, Luxury Brand Designer, Senior UI/UX Engineer, Motion Designer and Technical SEO Specialist.
+
+Your job is to **audit, then completely rebuild** this repository into the official public website of **Mamba Empire**, a diversified parent holding group.
+
+This is a destructive refactor, not a re-skin. Delete obsolete components, layouts and assets. Do not patch the old structure.
+
+---
+
+## 2. THE PIVOT
+
+**Abandon:** the startup-profile / `Mamba.pdf` document structure. That means no PDF pages as sections, no pitch-deck flow, no walls of text, no "what we plan to become" explanations.
+
+**Build:** the digital headquarters of an established holding group. The site *shows the empire*: its structure, companies, interests, leadership, impact and opportunities.
+
+`Mamba.pdf` is a **fact source only**, never a design blueprint.
+
+**Benchmarks (study, never copy):** Berkshire Hathaway, Alphabet, Tata Group, Dubai Holding, Virgin Group, LVMH, Blackstone.
+
+**Brand voice:** authoritative, composed, strategic, African-rooted, globally ambitious. Short sentences. No hype words.
+
+---
+
+## 3. THE 3-COLOR RULE (STRICT)
+
+Use exactly three brand colors in a 60 / 30 / 10 ratio. Two harmonize as the base. One contrasts and is reserved for action.
+
+| Role | Share | Color | Hex | Used for |
+|---|---|---|---|---|
+| Dominant (base) | 60% | Obsidian | `#0A0A0A` | Page backgrounds, nav, footer |
+| Secondary (harmony) | 30% | Deep Emerald | `#043927` | Alternate sections, cards, panels, gradients with Obsidian |
+| **Accent (contrast)** | **10%** | **Metallic Gold** | **`#D4AF37`** | **Buttons, CTAs, links on hover, key figures, active states, focus rings, important highlights only** |
+
+**Neutral text colors (not counted as brand colors):**
+- Primary text: Ivory `#F5F5F0`
+- Secondary text: Ivory at 70% opacity
+- Borders and dividers: Ivory at 10–15% opacity
+
+**Rules**
+1. Gold is the *only* color that signals "click here" or "this matters." Never use gold for decoration, large backgrounds, or body text.
+2. Do not add any other hue. Derive variations only through opacity, or a 5–10% lightness shift of the same three colors.
+3. Gold buttons use Obsidian text (contrast above 9:1). Hover state is a slightly brighter gold plus a subtle lift, not a new color.
+4. Secondary buttons: transparent with a 1px gold outline and ivory text.
+5. Define all colors as CSS variables/design tokens in one file, for example `--color-base`, `--color-surface`, `--color-accent`, `--color-text`. No hard-coded hex anywhere else.
+6. All text must meet WCAG AA contrast (4.5:1 body, 3:1 large text).
+
+---
+
+## 4. TYPOGRAPHY, SPACING & LAYOUT SYSTEM
+
+**Typography (max 2 families, self-hosted or `font-display: swap`, preloaded)**
+- Display/institutional statements: refined serif (e.g. Cormorant Garamond or Playfair Display).
+- Navigation, body, UI, labels: clean sans (e.g. Inter or Manrope).
+- Fluid type scale using `clamp()`: H1 56–96px, H2 36–56px, H3 24–32px, body 16–18px, label/eyebrow 12–13px uppercase with 0.12em tracking.
+- Body line-height 1.6–1.7, headings 1.1–1.2, max line length 65–75 characters.
+
+**Spacing (8-point system)**
+- Tokens: 4, 8, 16, 24, 32, 48, 64, 96, 128, 160px.
+- Section vertical padding: 96px mobile, 128px tablet, 160px desktop.
+- Gap between heading and content: 48px. Gap between cards: 24px.
+
+**Grid**
+- 12-column grid, max content width 1280px, wide-bleed sections allowed.
+- Side gutters: 20px mobile, 40px tablet, 64px desktop.
+- Alternate section backgrounds (Obsidian → Emerald-tinted → Obsidian) to create rhythm.
+- Every section follows a consistent structure: **eyebrow label → headline → one short paragraph (max 40 words) → visual/interactive content → single CTA.**
+
+**Visual treatment**
+- Subtle glassmorphism only on cards (backdrop blur, 5–8% ivory fill, 1px ivory-10% border).
+- Fine gold hairline dividers, used sparingly.
+- Consistent corner radius (suggest 12px cards, 999px pills for buttons).
+
+---
+
+## 5. BRAND IDENTITY ASSETS (BUILD AS SVG)
+
+1. Primary wordmark: MAMBA EMPIRE.
+2. Standalone mamba/serpent insignia: powerful, controlled, timeless, recognizable without the name.
+3. Favicon set (SVG, 32, 180 apple-touch, 192/512 for the manifest).
+4. Responsive logo variants (full, compact, icon-only; light-on-dark).
+5. Subtle scale-pattern graphic language used as section textures and dividers.
+6. Original SVG iconography (one stroke weight, one style).
+7. Where real photography does not exist, use abstract CSS/SVG compositions. Never fake company operations with unrelated stock photos or generated people.
+
+---
+
+## 6. SITE MAP & ROUTES
+
+| Route | Purpose |
+|---|---|
+| `/` | The Empire: homepage overview |
+| `/empire` | Interactive corporate structure map |
+| `/companies` and `/companies/[slug]` | Subsidiary portfolio and detail pages |
+| `/industries` | Sectors of operation and interest |
+| `/investments` | Philosophy, holdings, capital principles |
+| `/about` | Story, vision, mission, values |
+| `/leadership` | Founder/Chairman and executive profiles |
+| `/impact` | Community, education, sustainability |
+| `/newsroom` and `/newsroom/[slug]` | Press, milestones, insights |
+| `/careers` | Culture and open pathways |
+| `/governance` | Ethics, risk, compliance, policies (secondary nav and footer) |
+| `/contact` | Segmented contact hub |
+| `/privacy`, `/terms`, `/404` | Legal and error pages |
+
+**Primary nav (max 6):** The Empire · Companies · Industries · Investments · About · **Contact** (gold button).
+**Secondary (footer/mega-menu):** Leadership, Impact, Newsroom, Careers, Governance.
+Every link must resolve. No dead buttons or placeholder routes.
+
+---
+
+## 7. HOMEPAGE BLUEPRINT (ONE PAGE, ONE ROLE PER SECTION)
+
+1. **Hero:** full viewport, layered Obsidian/Emerald ambient background (canvas or CSS motion, no heavy video by default), insignia watermark.
+   - H1: **Building Africa's Next Great Empire**
+   - Sub: *A diversified ecosystem of businesses, innovation, investments and opportunities designed to create lasting impact.*
+   - Primary CTA (gold): **Explore the Empire** → `/empire`
+   - Secondary CTA (outline): **Our Companies** → `/companies`
+2. **Corporate identity strip:** one serif statement plus 3–4 verified facts (only if verified).
+3. **Ecosystem preview:** compact interactive node map linking to `/empire`.
+4. **Companies:** featured subsidiaries in an asymmetric layout, each with a status badge.
+5. **Industries:** horizontal sector explorer.
+6. **Investments & capital:** philosophy statement with a quiet visual.
+7. **Founder's vision:** portrait, pull quote, link to `/leadership`.
+8. **Impact:** verified metrics or commitments.
+9. **Newsroom:** 3 latest items in an editorial grid.
+10. **Partnerships and Careers:** two-panel split CTA.
+11. **Footer:** brand, nav columns (Empire, Companies, Sectors, Corporate, Legal), contact, socials, copyright.
+
+Avoid repetitive card-after-card stacking. Vary composition: asymmetric grid, bento, full-bleed statement, split panel.
+
+---
+
+## 8. KEY PAGE REQUIREMENTS
+
+**`/empire`:** interactive map of parent → subsidiaries → investments → partnerships → future ventures. Filter chips: *All, Technology, Consulting, Digital Services, Infrastructure, Investments, Future Ventures*. Keyboard-navigable, with a list view fallback on mobile.
+
+**`/companies`:** reusable `CompanyCard` and `CompanyDetail` templates driven entirely by data. Fields: name, slug, logo, sector, description, status, relationship, website, contact.
+
+**`/investments`:** philosophy, strategic holdings, capital principles, partnership and acquisition interest. **No invented amounts, valuations or returns.** Include a "Confidential / available on request" content state.
+
+**`/leadership`:** Founder/Chairman biography, philosophy, long-term outlook for Africa. Do not invent credentials, titles or achievements. Use clearly marked content slots where data is missing.
+
+**`/impact`:** only verified metrics (count-up animation). Where none exist, show commitments and initiatives, labeled as such.
+
+**`/governance`:** clean, scannable accordion/tab layout: Framework, Ethics, Risk, Compliance, Policies, Accountability. Secondary visual weight.
+
+**`/contact`:** tabs for *Investor Relations, Business Partnerships, Media, Careers, General*. Real forms with validation, honeypot spam protection, inline errors, success/failure states, and a per-tab email routing config.
+
+---
+
+## 9. CONTENT INTEGRITY (NON-NEGOTIABLE)
+
+- Never fabricate subsidiaries, financials, valuations, offices, leaders, or awards.
+- Every entity carries a status: `operating | established | strategic-investment | in-development | planned | partnership`. Show it as a badge. Never present a planned venture as operating.
+- Missing information becomes a clean, content-ready placeholder structure flagged in a `CONTENT_TODO.md`, never invented copy.
+- Maximum 40 words per paragraph on landing sections. Use headings, labels and visuals instead of prose.
+
+---
+
+## 10. DATA & ARCHITECTURE
+
+1. **Audit first:** report framework, language, build tool, routes, components, styling, assets, dependencies and deploy config. Keep the existing stack unless it blocks the requirements. No unnecessary dependencies.
+2. **Content separated from presentation:** typed config files in `/data`: `companies`, `sectors`, `investments`, `leadership`, `news`, `impact`, `governance`, `navigation`, `site` (name, URLs, contacts, socials). Adding a subsidiary means adding one object.
+3. **Suggested structure:**
+   - `components/brand, navigation, layout, hero, ecosystem, companies, investments, editorial, graphics, motion, forms, footer, ui`
+   - `data/`, `styles/tokens`, `pages|app/` by route, `public/` (optimized assets)
+4. Centralize design tokens (colors, type, spacing, radius, shadow, motion durations).
+
+---
+
+## 11. MOTION & INTERACTION
+
+- Scroll-triggered fade/translate reveals (IntersectionObserver), subtle parallax on hero only.
+- Motion tokens: 200ms micro, 400–600ms reveals, easing `cubic-bezier(0.22, 1, 0.36, 1)`.
+- Animate only `transform` and `opacity`.
+- Smooth page transitions, animated nav underline, hover-responsive cards and ecosystem nodes.
+- **Must respect `prefers-reduced-motion`** (disable parallax and reveals, keep content visible).
+- No autoplaying sound, no layout shift from animation.
+
+---
+
+## 12. RESPONSIVE DESIGN (MOBILE-FIRST)
+
+Breakpoints: 360 / 640 / 768 / 1024 / 1280 / 1536px+.
+- Custom mobile navigation: full-screen overlay menu, large touch targets (min 44×44px), sticky gold "Contact" action.
+- Re-compose layouts for mobile (stack, reorder, simplify the ecosystem map). Do not just shrink desktop.
+- Test on 360px phones, tablets, laptops and ultra-wide screens. No horizontal scroll.
+
+---
+
+## 13. SEO (TECHNICAL AND CONTENT)
+
+- Semantic HTML5 landmarks (`header, nav, main, section, article, footer`). **Exactly one H1 per page**, with logical H2/H3 hierarchy.
+- Unique `<title>` (≤60 chars) and meta description (≤155 chars) per page. Title template: `Page Name | Mamba Empire`.
+- Canonical URL, Open Graph and Twitter Card tags, and a 1200×630 OG image for each key page.
+- JSON-LD structured data: `Organization` (with logo, sameAs, contactPoint) site-wide, `WebSite`, `BreadcrumbList` on inner pages, `Article` on news, `Person` on leadership where verified.
+- `sitemap.xml`, `robots.txt`, `manifest.webmanifest`, descriptive URL slugs, breadcrumbs, and internal linking between related companies, sectors and news.
+- Images: descriptive alt text, WebP/AVIF, explicit width/height, `loading="lazy"` below the fold, responsive `srcset`.
+- Custom 404 with helpful links. Proper 301 handling for any old routes.
+- **Performance targets:** LCP < 2.5s, CLS < 0.1, INP < 200ms, Lighthouse ≥ 95 (Performance, Accessibility, Best Practices, SEO). Preload hero font and critical CSS, code-split by route, no heavy libraries for simple effects.
+
+---
+
+## 14. ACCESSIBILITY
+
+WCAG 2.2 AA: skip-to-content link, visible gold focus rings, full keyboard navigation, ARIA only where semantics are insufficient, accessible tabs/accordions/menus, labeled form fields with error association, never rely on color alone for meaning.
+
+---
+
+## 15. EXECUTION PHASES
+
+1. **Audit:** inspect the repo, then present the tech-stack summary, proposed folder structure and route map. **Pause for my approval before coding.**
+2. **Foundation:** design tokens, typography, logo/SVG system, primitives (Button, Badge, Card, Section, Container, Eyebrow, Tabs, Accordion).
+3. **Build:** layout shell, navigation, footer, homepage, then all routes with real data.
+4. **Content:** extract verified facts from `Mamba.pdf` and the repo into the `/data` files. Flag gaps in `CONTENT_TODO.md`.
+5. **QA:** test all routes and links, forms, responsiveness, keyboard and screen-reader flow, reduced motion, Lighthouse, and broken assets. Fix issues, do not just report them.
+6. **Deploy-ready:** production build, clean unused files, domain-ready config, HTTPS-safe, security headers, error handling. Preserve existing deployment setup.
+
+---
+
+## 16. DEFINITION OF DONE
+
+- [ ] Only Obsidian, Emerald and Gold used, in a ~60/30/10 balance; gold appears only on CTAs and key highlights
+- [ ] Every CTA/button is gold or gold-outlined and consistent site-wide
+- [ ] Zero PDF-style layouts or text walls remain
+- [ ] All routes live, all links working, all forms validated
+- [ ] Consistent 8pt spacing and section rhythm throughout
+- [ ] Each page has one H1, unique meta, canonical, OG, and JSON-LD
+- [ ] Lighthouse ≥ 95 in all four categories; Core Web Vitals targets met
+- [ ] Fully responsive and reduced-motion safe
+- [ ] No fabricated facts; all entities carry a status badge
+- [ ] Adding a new subsidiary requires editing one data file only
+
+**The site must feel like an established institution's headquarters, not a startup, template, pitch deck or PDF. Show the empire. Do not explain how to build one.**
+
+Begin with Phase 1 now.

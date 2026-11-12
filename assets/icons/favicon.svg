@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <defs>
+    <linearGradient id="favGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fae29c" />
+      <stop offset="50%" stop-color="#d4af37" />
+      <stop offset="100%" stop-color="#8a5a14" />
+    </linearGradient>
+  </defs>
+  <polygon points="32,2 58,16 58,48 32,62 6,48 6,16" fill="#040b08" stroke="url(#favGold)" stroke-width="2.5" />
+  <!-- Crocodile Head & Crown Crest -->
+  <path d="M24,14 L28,19 L32,11 L36,19 L40,14 L37,22 L27,22 Z" fill="url(#favGold)" />
+  <path d="M32,21 L43,26 L47,32 L44,40 L37,41 L32,46 L27,41 L20,40 L17,32 L21,26 Z" fill="#0e2f23" stroke="url(#favGold)" stroke-width="1.8" />
+  <path d="M32,21 L32,46" stroke="url(#favGold)" stroke-width="1.5" />
+  <polygon points="25,29 29,31 27,33" fill="#00ffaa" />
+  <polygon points="39,29 35,31 37,33" fill="#00ffaa" />
+  <path d="M18,44 L32,56 L46,44" stroke="url(#favGold)" stroke-width="2" fill="none" />
+</svg>

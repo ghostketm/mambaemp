@@ -1,0 +1,246 @@
+/* Distinct Layout Archetypes for Mamba Empire Pages */
+
+/* -------------------------------------------------------------
+   1. MASTER-DETAIL & COMMAND CENTER LAYOUT (empire.html)
+   ------------------------------------------------------------- */
+.layout-master-detail {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: var(--space-32);
+  align-items: start;
+}
+@media (max-width: 992px) {
+  .layout-master-detail {
+    grid-template-columns: 1fr;
+  }
+}
+.master-sidebar {
+  background: var(--color-base-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-24);
+  position: sticky;
+  top: 110px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-12);
+  max-height: calc(100vh - 140px);
+  overflow-y: auto;
+}
+.master-item-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: var(--radius-badge);
+  background: rgba(245, 245, 240, 0.03);
+  border: 1px solid var(--color-border-subtle);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  text-align: left;
+  transition: all var(--transition-fast);
+}
+.master-item-btn:hover,
+.master-item-btn.active {
+  background: var(--color-surface);
+  border-color: var(--color-accent);
+  color: var(--color-text-primary);
+}
+.master-item-btn strong {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-text-primary);
+}
+.master-item-btn.active strong {
+  color: var(--color-accent);
+}
+
+.detail-viewport {
+  background: var(--color-base-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-48);
+  min-height: 580px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* -------------------------------------------------------------
+   2. BENTO GRID ARCHETYPE (companies.html)
+   ------------------------------------------------------------- */
+.layout-bento-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-24);
+}
+.bento-col-8 {
+  grid-column: span 8;
+}
+.bento-col-4 {
+  grid-column: span 4;
+}
+.bento-col-6 {
+  grid-column: span 6;
+}
+.bento-col-12 {
+  grid-column: span 12;
+}
+@media (max-width: 900px) {
+  .bento-col-8, .bento-col-4, .bento-col-6 {
+    grid-column: span 12;
+  }
+}
+.bento-card {
+  background: var(--color-base-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-40);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(14px);
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+.bento-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-accent);
+}
+.bento-hero-bg {
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 180px;
+  height: 180px;
+  background: radial-gradient(circle, rgba(4, 57, 39, 0.4) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------
+   3. MAGAZINE & THREE-COLUMN SHOWCASE (industries.html)
+   ------------------------------------------------------------- */
+.layout-magazine-lead {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: var(--space-32);
+  margin-bottom: var(--space-48);
+}
+@media (max-width: 860px) {
+  .layout-magazine-lead {
+    grid-template-columns: 1fr;
+  }
+}
+.magazine-columns-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-24);
+}
+@media (max-width: 900px) {
+  .magazine-columns-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* -------------------------------------------------------------
+   4. DATA TABLE & COMPARISON SPREAD (investments.html)
+   ------------------------------------------------------------- */
+.layout-comparison-matrix {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+  background: var(--color-base-card);
+}
+.layout-comparison-matrix th,
+.layout-comparison-matrix td {
+  padding: var(--space-20) var(--space-24);
+  border-bottom: 1px solid var(--color-border-subtle);
+  text-align: left;
+}
+.layout-comparison-matrix th {
+  background: var(--color-surface);
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--color-accent);
+}
+.layout-comparison-matrix tr:last-child td {
+  border-bottom: none;
+}
+.layout-comparison-matrix tr:hover td {
+  background: rgba(245, 245, 240, 0.02);
+}
+
+/* -------------------------------------------------------------
+   5. TIMELINE & STORYTELLING ZIG-ZAG (about.html)
+   ------------------------------------------------------------- */
+.layout-zigzag-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-64);
+  align-items: center;
+  padding: var(--space-48) 0;
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.layout-zigzag-row:last-child {
+  border-bottom: none;
+}
+.layout-zigzag-row.reverse {
+  direction: rtl;
+}
+.layout-zigzag-row.reverse > * {
+  direction: ltr;
+}
+@media (max-width: 768px) {
+  .layout-zigzag-row,
+  .layout-zigzag-row.reverse {
+    grid-template-columns: 1fr;
+    direction: ltr;
+    gap: var(--space-24);
+  }
+}
+
+.timeline-step-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--color-accent);
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: var(--space-12);
+}
+
+/* -------------------------------------------------------------
+   6. SPLIT-SCREEN SCREEN & COMMAND HUB (contact.html)
+   ------------------------------------------------------------- */
+.layout-split-screen {
+  display: grid;
+  grid-template-columns: 420px 1fr;
+  gap: var(--space-48);
+  min-height: calc(100vh - 240px);
+}
+@media (max-width: 900px) {
+  .layout-split-screen {
+    grid-template-columns: 1fr;
+  }
+}
+.split-left-panel {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-48);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.split-right-form {
+  background: var(--color-base-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  padding: var(--space-48);
+}
+

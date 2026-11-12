@@ -1,0 +1,52 @@
+/* Clean Professional Correlation Network Presentation - Static Nodes with Elegant Hover Highlights */
+
+.correlation-network-wrap {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#correlationSvg {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  overflow: visible;
+}
+
+/* Static Bastion Nodes - Zero Repel / Zero Jitter */
+.network-node {
+  cursor: pointer;
+  transform-origin: center;
+  transition: transform var(--transition-fast), filter var(--transition-fast);
+}
+
+.network-node:hover,
+.network-node.active-node {
+  filter: drop-shadow(0 0 16px rgba(212, 175, 55, 0.45));
+}
+
+.network-node circle {
+  transition: stroke var(--transition-fast), stroke-width var(--transition-fast), fill var(--transition-fast);
+}
+
+.network-node:hover circle,
+.network-node.active-node circle {
+  stroke: var(--color-accent) !important;
+  stroke-width: 3.5px !important;
+}
+
+/* Static Network Link Lines */
+.correlation-line {
+  stroke: rgba(212, 175, 55, 0.22);
+  stroke-width: 1.5;
+  stroke-dasharray: 4 4;
+  transition: stroke var(--transition-fast), stroke-width var(--transition-fast);
+}
+
+.correlation-line.highlighted {
+  stroke: var(--color-accent) !important;
+  stroke-width: 2.5px !important;
+  stroke-dasharray: none !important;
+}

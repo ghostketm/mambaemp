@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Structure Map | Mamba Empire</title>
+  <meta name="description" content="Interactive corporate architecture of Mamba Empire: Master-Detail and Command Center Layout across parent holding, operating bastions, and subsidiaries.">
+  <meta name="theme-color" content="#0A0A0A">
+  <link rel="canonical" href="https://mambaempire.com/empire">
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/layouts.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container site-header-inner">
+      <a href="index.html" class="site-brand">
+        <img src="assets/icons/mamba-empire.svg" alt="Mamba Empire Logo" class="site-brand-logo">
+        <span class="site-brand-text">MAMBA EMPIRE</span>
+      </a>
+      <nav class="site-nav">
+        <a href="empire.html" class="nav-link active">The Empire</a>
+        <a href="companies.html" class="nav-link">Companies</a>
+        <a href="industries.html" class="nav-link">Industries</a>
+        <a href="investments.html" class="nav-link">Investments</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="btn btn-primary">Contact</a>
+      </nav>
+      <button class="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" style="padding-top: 130px; padding-bottom: 96px;">
+    <div class="container">
+      <div style="margin-bottom: var(--space-48);">
+        <span class="eyebrow">Command Center & Master-Detail Architecture</span>
+        <h1 style="margin-bottom: var(--space-16);">Structure of the Empire</h1>
+        <p style="font-size: var(--font-size-body); max-width: 760px; color: var(--color-text-secondary);">
+          Mamba Empire operates as a cohesive, actively running sovereign titan. Select any institutional bastion from the hierarchy sidebar to inspect its active commercial operations, legal posture, and cross-bastion covenants.
+        </p>
+      </div>
+
+      <!-- Master-Detail Layout Engine -->
+      <div class="layout-master-detail">
+        
+        <!-- Left Master Sidebar -->
+        <aside class="master-sidebar" aria-label="Corporate Nodes">
+          <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.12em; font-weight: 700; margin-bottom: 4px;">Holding Custodian</span>
+          <button class="master-item-btn active" data-target="detail-core">
+            <strong>Empire Core</strong>
+            <span style="font-size: 0.8rem; color: var(--color-text-dim);">Central Treasury & Governance</span>
+          </button>
+
+          <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--color-accent); letter-spacing: 0.12em; font-weight: 700; margin-top: var(--space-12); margin-bottom: 4px;">Operating Bastions</span>
+          <button class="master-item-btn" data-target="detail-ikr">
+            <strong>IKR Plantations</strong>
+            <span style="font-size: 0.8rem; color: var(--color-text-dim);">Land, Real Estate & Micro-Grids</span>
+          </button>
+          <button class="master-item-btn" data-target="detail-kosa">
+            <strong>KOSA Agri-Food</strong>
+            <span style="font-size: 0.8rem; color: var(--color-text-dim);">All Crops, Animals & Food Exports</span>
+          </button>
+          <button class="master-item-btn" data-target="detail-zenit">
+            <strong>ZenIT Innovation</strong>
+            <span style="font-size: 0.8rem; color: var(--color-text-dim);">Software, Devices & AI Telematics</span>
+          </button>
+          <button class="master-item-btn" data-target="detail-banditsec">
+            <strong>BanditSec Integrity</strong>
+            <span style="font-size: 0.8rem; color: var(--color-text-dim);">Cyber Defense & Physical Provenance</span>
+          </button>
+          <button class="master-item-btn" data-target="detail-portfolio">
+            <strong>Portfolio & Research</strong>
+            <span style="font-size: 0.8rem; color: var(--color-text-dim);">Future Labs & Academic Institutes</span>
+          </button>
+        </aside>
+
+        <!-- Right Detail Viewport -->
+        <section class="detail-viewport" id="detailViewport">
+          
+          <!-- Detail: Empire Core -->
+          <div class="detail-panel" id="detail-core">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-20);">
+              <span class="badge established"><span class="badge-dot"></span> Sovereign Custodian</span>
+              <span style="font-size: 0.85rem; color: var(--color-accent);">BRS Incorporated · Kenya</span>
+            </div>
+            <h2 style="font-size: 2.5rem; margin-bottom: var(--space-12);">Empire Core</h2>
+            <p style="font-size: 1.1rem; color: var(--color-text-secondary); margin-bottom: var(--space-32); line-height: 1.6;">
+              The centralized fiduciary and trademark custodian of Mamba Empire Ltd. Actively manages group treasury, deploys capital into land and technology expansion, enforces the 50% retained earnings mandate, and governs formal subsidiary spin-out triggers.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: var(--space-20); margin-bottom: var(--space-32);">
+              <div style="background: rgba(4, 57, 39, 0.3); padding: var(--space-20); border-radius: var(--radius-badge); border: 1px solid var(--color-border);">
+                <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--color-text-dim);">Spin-Out Trigger</span>
+                <strong style="display: block; font-size: 1.4rem; color: var(--color-accent); font-family: var(--font-serif);">$250,000 / Year</strong>
+                <span style="font-size: 0.82rem; color: var(--color-text-secondary);">Independent statutory spin-out threshold</span>
+              </div>
+              <div style="background: rgba(4, 57, 39, 0.3); padding: var(--space-20); border-radius: var(--radius-badge); border: 1px solid var(--color-border);">
+                <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--color-text-dim);">Profit Retention</span>
+                <strong style="display: block; font-size: 1.4rem; color: var(--color-accent); font-family: var(--font-serif);">≥ 50% Retained</strong>
+                <span style="font-size: 0.82rem; color: var(--color-text-secondary);">Compounding treasury balance sheet liquidity</span>
+              </div>
+              <div style="background: rgba(4, 57, 39, 0.3); padding: var(--space-20); border-radius: var(--radius-badge); border: 1px solid var(--color-border);">
+                <span style="font-size: 0.72rem; text-transform: uppercase; color: var(--color-text-dim);">Governance Role</span>
+                <strong style="display: block; font-size: 1.4rem; color: var(--color-accent); font-family: var(--font-serif);">Holding & IP</strong>
+                <span style="font-size: 0.82rem; color: var(--color-text-secondary);">Centralized tax, legal and board</span>
+              </div>
+            </div>
+
+            <div style="margin-top: auto; padding-top: var(--space-24); border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+              <span style="font-size: 0.88rem; color: var(--color-text-dim);">Charter: Mamba Empire Ltd (Private Limited Company)</span>
+              <a href="companies.html#core" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">Examine Core Charter &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Detail: IKR -->
+          <div class="detail-panel" id="detail-ikr" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-20);">
+              <span class="badge operating"><span class="badge-dot"></span> Active Bastion</span>
+              <span style="font-size: 0.85rem; color: var(--color-accent);">Land & Infrastructure</span>
+            </div>
+            <h2 style="font-size: 2.5rem; margin-bottom: var(--space-12);">IKR Plantations & Infrastructure</h2>
+            <p style="font-size: 1.1rem; color: var(--color-text-secondary); margin-bottom: var(--space-32); line-height: 1.6;">
+              Actively controls the physical soil, commercial real estate holdings, logistics centers, and off-grid utilities that ground the empire's operations across East Africa.
+            </p>
+            <div style="background: rgba(4, 57, 39, 0.2); border: 1px solid var(--color-border); border-radius: var(--radius-card); padding: var(--space-24); margin-bottom: var(--space-32);">
+              <h4 style="font-size: 1.1rem; color: var(--color-accent); margin-bottom: var(--space-12);">Asset Inventory:</h4>
+              <ul style="color: var(--color-text-secondary); padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+                <li>Cultivated plantation land dedicated to specialty coffee, tea, and agroforestry.</li>
+                <li>Strategic commercial land banking along critical East African trade routes.</li>
+                <li>Asset-light 3PL temperature-controlled cold storage facilities and dry warehouses.</li>
+                <li>Commercial off-grid solar micro-grids and sustainable water reticulation.</li>
+              </ul>
+            </div>
+            <div style="margin-top: auto; padding-top: var(--space-24); border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 0.88rem; color: var(--color-text-dim);">Feeds directly into KOSA harvest logistics</span>
+              <a href="companies.html#ikr" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">Examine IKR Holdings &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Detail: KOSA -->
+          <div class="detail-panel" id="detail-kosa" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-20);">
+              <span class="badge operating"><span class="badge-dot"></span> Active Bastion</span>
+              <span style="font-size: 0.85rem; color: var(--color-accent);">Agri-Food & Bio-Trade</span>
+            </div>
+            <h2 style="font-size: 2.5rem; margin-bottom: var(--space-12);">KOSA</h2>
+            <p style="font-size: 1.1rem; color: var(--color-text-secondary); margin-bottom: var(--space-32); line-height: 1.6;">
+              Actively commands the agricultural bio-economy: all crops, specialty coffee, highland tea, grains, livestock stewardship, dairy, raw honey, natural animal products, and international food exports.
+            </p>
+            <div style="background: rgba(4, 57, 39, 0.2); border: 1px solid var(--color-border); border-radius: var(--radius-card); padding: var(--space-24); margin-bottom: var(--space-32);">
+              <h4 style="font-size: 1.1rem; color: var(--color-accent); margin-bottom: var(--space-12);">Export Posture & Standards:</h4>
+              <ul style="color: var(--color-text-secondary); padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+                <li>100% compliant with EU Deforestation Regulation (EUDR) digital traceability.</li>
+                <li>Forward contracts with vetted cooperative networks, funded via buyer deposits and LCs.</li>
+                <li>Real-time field telemetry and quality testing backed by KEPHIS certification.</li>
+              </ul>
+            </div>
+            <div style="margin-top: auto; padding-top: var(--space-24); border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 0.88rem; color: var(--color-text-dim);">Feeds live operational telemetry into ZenIT systems</span>
+              <a href="companies.html#kosa" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">Examine KOSA Exports &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Detail: ZenIT -->
+          <div class="detail-panel" id="detail-zenit" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-20);">
+              <span class="badge operating"><span class="badge-dot"></span> Active Bastion</span>
+              <span style="font-size: 0.85rem; color: var(--color-accent);">Technology & Electronics Devices</span>
+            </div>
+            <h2 style="font-size: 2.5rem; margin-bottom: var(--space-12);">ZenIT</h2>
+            <p style="font-size: 1.1rem; color: var(--color-text-secondary); margin-bottom: var(--space-32); line-height: 1.6;">
+              High-order technological innovation. Engineers and sells enterprise AI engines, custom electronic hardware, IoT telematics devices, smart agricultural sensors, and software platforms.
+            </p>
+            <div style="background: rgba(4, 57, 39, 0.2); border: 1px solid var(--color-border); border-radius: var(--radius-card); padding: var(--space-24); margin-bottom: var(--space-32);">
+              <h4 style="font-size: 1.1rem; color: var(--color-accent); margin-bottom: var(--space-12);">Hardware & Platform Architecture:</h4>
+              <ul style="color: var(--color-text-secondary); padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+                <li>Edge telematics sensors, soil/moisture monitors, and tamper-evident tracking devices.</li>
+                <li>SaaS farm-to-buyer traceability platform powering cross-border trade logistics.</li>
+                <li>Non-custodial fintech settlement rails linked directly to Central Bank payment APIs.</li>
+              </ul>
+            </div>
+            <div style="margin-top: auto; padding-top: var(--space-24); border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 0.88rem; color: var(--color-text-dim);">Device firmware audited by BanditSec</span>
+              <a href="companies.html#zenit" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">Examine ZenIT Suite &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Detail: BanditSec -->
+          <div class="detail-panel" id="detail-banditsec" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-20);">
+              <span class="badge operating"><span class="badge-dot"></span> Active Bastion</span>
+              <span style="font-size: 0.85rem; color: var(--color-accent);">Cyber & Physical Integrity</span>
+            </div>
+            <h2 style="font-size: 2.5rem; margin-bottom: var(--space-12);">BanditSec</h2>
+            <p style="font-size: 1.1rem; color: var(--color-text-secondary); margin-bottom: var(--space-32); line-height: 1.6;">
+              Defends the group's digital, cyber, and operational frontiers. Delivers offensive penetration testing, physical security integrity, and ODPC data privacy compliance.
+            </p>
+            <div style="background: rgba(4, 57, 39, 0.2); border: 1px solid var(--color-border); border-radius: var(--radius-card); padding: var(--space-24); margin-bottom: var(--space-32);">
+              <h4 style="font-size: 1.1rem; color: var(--color-accent); margin-bottom: var(--space-12);">Sovereign Defense Posture:</h4>
+              <ul style="color: var(--color-text-secondary); padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+                <li>Strict independence rule: never audits ZenIT software, preserving external credibility.</li>
+                <li>Physical supply chain cryptographic authentication and export anti-tamper sealing.</li>
+                <li>Full Data Protection Act 2019 statutory verification and threat monitoring retainers.</li>
+              </ul>
+            </div>
+            <div style="margin-top: auto; padding-top: var(--space-24); border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 0.88rem; color: var(--color-text-dim);">Cryptographic assurance across all bastions</span>
+              <a href="companies.html#banditsec" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">Examine Defense Protocols &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Detail: Portfolio -->
+          <div class="detail-panel" id="detail-portfolio" style="display: none;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: var(--space-20);">
+              <span class="badge operating"><span class="badge-dot"></span> Active Bastion</span>
+              <span style="font-size: 0.85rem; color: var(--color-accent);">Future Labs & Institutes</span>
+            </div>
+            <h2 style="font-size: 2.5rem; margin-bottom: var(--space-12);">Portfolio, Research & Education</h2>
+            <p style="font-size: 1.1rem; color: var(--color-text-secondary); margin-bottom: var(--space-32); line-height: 1.6;">
+              The intellectual vanguard. Directs future-based applied scientific research, advanced technology labs, academic higher institutes, and elite engineering talent pipelines.
+            </p>
+            <div style="background: rgba(4, 57, 39, 0.2); border: 1px solid var(--color-border); border-radius: var(--radius-card); padding: var(--space-24); margin-bottom: var(--space-32);">
+              <h4 style="font-size: 1.1rem; color: var(--color-accent); margin-bottom: var(--space-12);">Scientific & Academic Programs:</h4>
+              <ul style="color: var(--color-text-secondary); padding-left: 20px; display: flex; flex-direction: column; gap: 8px;">
+                <li>Applied research in bio-organic soil genetics, clean energy, and artificial intelligence.</li>
+                <li>Specialized 20-learner engineering bootcamps producing elite full-stack and security engineers.</li>
+                <li>Direct recruitment pipelines converting graduates immediately into ZenIT and BanditSec client delivery.</li>
+              </ul>
+            </div>
+            <div style="margin-top: auto; padding-top: var(--space-24); border-top: 1px solid var(--color-border); display: flex; justify-content: space-between; align-items: center;">
+              <span style="font-size: 0.88rem; color: var(--color-text-dim);">Feeds research and talent into the empire</span>
+              <a href="companies.html#portfolio" class="btn btn-secondary" style="padding: 10px 20px; font-size: 0.85rem;">Examine Institute Labs &rarr;</a>
+            </div>
+          </div>
+
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a href="index.html" class="site-brand">
+            <img src="assets/icons/mamba-empire.svg" alt="Mamba Empire Logo" style="width: 32px; height: 32px;">
+            <span class="site-brand-text" style="font-size: 1.15rem;">MAMBA EMPIRE</span>
+          </a>
+          <p>Official corporate headquarters of Mamba Empire Ltd.</p>
+        </div>
+        <div class="footer-col">
+          <h5>The Bastions</h5>
+          <ul>
+            <li><a href="companies.html#kosa">KOSA (Agriculture)</a></li>
+            <li><a href="companies.html#zenit">ZenIT (Tech & Electronics)</a></li>
+            <li><a href="companies.html#banditsec">BanditSec (Security)</a></li>
+            <li><a href="companies.html#ikr">IKR (Plantations & Land)</a></li>
+            <li><a href="companies.html#portfolio">Portfolio (Research)</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Architecture</h5>
+          <ul>
+            <li><a href="empire.html">Structure Map</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="investments.html">Capital Principles</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Governance</h5>
+          <ul>
+            <li><a href="governance.html">Framework</a></li>
+            <li><a href="privacy.html">Privacy Policy</a></li>
+            <li><a href="contact.html">Contact Hub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>&copy; 2026 Mamba Empire Ltd. Registered in Kenya.</div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="data/site.js"></script>
+  <script src="assets/js/app.js"></script>
+  <script>
+    const buttons = document.querySelectorAll('.master-item-btn');
+    const panels = document.querySelectorAll('.detail-panel');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const targetId = btn.dataset.target;
+        panels.forEach(p => {
+          if (p.id === targetId) {
+            p.style.display = 'flex';
+          } else {
+            p.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

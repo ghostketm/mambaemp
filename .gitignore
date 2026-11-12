@@ -1,0 +1,30 @@
+# Operating System Files
+Thumbs.db
+ehthumbs.db
+[Dd]esktop.ini
+$RECYCLE.BIN/
+.DS_Store
+._*
+
+# Editor & IDE Directories
+.vscode/*
+!.vscode/settings.json
+.idea/
+
+# Package Managers & Dependencies
+node_modules/
+*.log
+
+# Environment & Secrets
+.env
+.env.*
+*.key
+*.pem
+
+# Temp & Archives
+*.zip
+*.tar.gz
+*.bak
+tmp/
+temp/
+
